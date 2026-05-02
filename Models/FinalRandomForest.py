@@ -29,8 +29,7 @@ numeric_cols = X_train.columns.drop('gender')
 
 discretizer = KBinsDiscretizer(
     n_bins=3,
-    encode='ordinal',
-    strategy='quantile'
+    encode='ordinal'
 )
 
 X_train[numeric_cols] = discretizer.fit_transform(X_train[numeric_cols])
